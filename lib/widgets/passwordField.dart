@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
+import 'package:otterli/screens/create_account_screen.dart';
+import 'package:otterli/screens/feedback_screen.dart';
 
-class DatepickerForm extends StatefulWidget {
+import 'datepicker_form.dart';
+
+class PasswordFields extends StatefulWidget {
+  bool check_obsecure;
   final String fieldName;
-  DatepickerForm(this.fieldName);
+  PasswordFields(this.fieldName, this.check_obsecure);
 
   @override
-  _DatepickerFormState createState() => _DatepickerFormState();
+  State<PasswordFields> createState() => _PasswordFieldsState();
 }
 
-class _DatepickerFormState extends State<DatepickerForm> {
-  TextEditingController date = TextEditingController();
+class _PasswordFieldsState extends State<PasswordFields> {
+  final formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
+    //CreateAccountScreen(formkey);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -33,34 +40,30 @@ class _DatepickerFormState extends State<DatepickerForm> {
         Padding(
           padding: const EdgeInsets.only(bottom: 11),
           child: TextFormField(
-            keyboardType: TextInputType.none,
-            readOnly: true,
-            controller: date,
+            textInputAction: TextInputAction.next,
+            obscureText: widget.check_obsecure,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.only(left: 28),
-              suffixIcon: Icon(Icons.arrow_drop_down_sharp),
-              suffixIconColor: Colors.black,
-              hintText: '     Select Date',
+              hintText: 'Enter ${widget.fieldName}',
               hintStyle: GoogleFonts.poppins(
                 fontSize: 12,
                 fontWeight: FontWeight.w300,
               ),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+              suffixIcon: IconButton(
+                icon: Icon(
+                  widget.check_obsecure
+                      ? Icons.visibility
+                      : Icons.visibility_off,
+                ),
+                onPressed: () {
+                  setState(() {
+                    widget.check_obsecure = !widget.check_obsecure;
+                  });
+                },
+              ),
             ),
-            onTap: () async {
-              DateTime? pickeddate = await showDatePicker(
-                  context: context,
-                  initialDate: DateTime.now(),
-                  firstDate: DateTime(1950),
-                  lastDate: DateTime.now());
-
-              if (pickeddate != null) {
-                setState(() {
-                  date.text = DateFormat('MM/dd/y').format(pickeddate);
-                });
-              }
-            },
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter some text';

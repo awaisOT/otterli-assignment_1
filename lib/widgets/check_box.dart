@@ -12,14 +12,14 @@ class _CheckBoxState extends State<CheckBox> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10.0),
+      //padding: const EdgeInsets.all(10.0),
       child: Column(
         children: <Widget>[
           Transform.scale(
-            scale: 1.5,
+            scale: 1.0,
             child: Checkbox(
                 value: checkBoxValue,
-                activeColor: Colors.grey,
+                activeColor: Color(0xff07AD5A),
                 shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5))),
                 onChanged: (bool? newValue) {

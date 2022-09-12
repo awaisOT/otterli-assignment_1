@@ -9,11 +9,17 @@ class VendorsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const <Widget>[
-        UpperHalfVendor(),
-        LowerHalfVendor(),
-      ],
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 220, 251, 235),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Image.asset('images/Top_Nav.png'),
+            UpperHalfVendor(),
+            LowerHalfVendor(),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -17,7 +17,7 @@ class RatingsVendor extends StatelessWidget {
                 const Icon(
                   Icons.star_half,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
                 Text(
                   '4.8  Rating',
@@ -31,7 +31,7 @@ class RatingsVendor extends StatelessWidget {
             Row(
               children: <Widget>[
                 Text(
-                  '200 reviews   ',
+                  '200 reviews ',
                   style: GoogleFonts.poppins(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
@@ -59,32 +59,35 @@ class RatingsVendor extends StatelessWidget {
                 fontWeight: FontWeight.w400,
               ),
             ),
+            const SizedBox(
+              height: 12,
+            ),
             Row(
               children: const <Widget>[
                 Icon(
                   Icons.star_border,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
                 Icon(
                   Icons.star_border,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
                 Icon(
                   Icons.star_border,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
                 Icon(
                   Icons.star_border,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
                 Icon(
                   Icons.star_border,
                   size: 20,
-                  color: Color.fromARGB(255, 237, 224, 82),
+                  color: Color(0xffF3D434),
                 ),
               ],
             )

@@ -12,13 +12,13 @@ class LowerHalfVendor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(20),
       decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 238, 238, 238),
+          color: Color.fromARGB(255, 255, 255, 255),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(15), topRight: Radius.circular(15))),
       width: double.infinity,
-      height: 450,
+      height: 533,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -41,7 +41,7 @@ class LowerHalfVendor extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                       fontWeight: FontWeight.w400,
-                      color: Colors.grey,
+                      color: Color(0xffC8C8C8),
                     ),
                   ),
                 ],
@@ -50,21 +50,21 @@ class LowerHalfVendor extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 12,
           ),
           Text(
             '£4.50',
             style: GoogleFonts.poppins(
               fontSize: 20,
               fontWeight: FontWeight.w600,
-              color: Colors.green,
+              color: Color(0xff00A651),
             ),
           ),
-          SizedBox(
-            height: 5,
+          const SizedBox(
+            height: 15,
           ),
-          RatingsVendor(),
-          SizedBox(
+          const RatingsVendor(),
+          const SizedBox(
             height: 5,
           ),
           Text(
@@ -74,6 +74,9 @@ class LowerHalfVendor extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
+          const SizedBox(
+            height: 10,
+          ),
           Row(
             children: <Widget>[
               CategoriesVendor('Snack'),
@@ -81,18 +84,37 @@ class LowerHalfVendor extends StatelessWidget {
               CategoriesVendor('Sweets'),
             ],
           ),
-          Text(
-            'Product Notes (click to see more)',
-            style: GoogleFonts.poppins(
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-            ),
+          const SizedBox(
+            height: 20,
           ),
-          Container(
-            height: 95,
-            width: 350,
+          Row(
+            children: [
+              Text(
+                'Product Notes ',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                '(click to see more)',
+                style: GoogleFonts.poppins(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          const SizedBox(
+            width: 367,
             child: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ipsum...'),
+          ),
+          const SizedBox(
+            height: 30,
           ),
           ButtonsVendor(),
         ],

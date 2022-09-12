@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(255, 7, 173, 90),
+      statusBarColor: Color(0xff00A651),
       statusBarBrightness: Brightness.dark,
     ));
     return MaterialApp(
@@ -23,17 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-          body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset('images/Top_Nav.png'),
-            CreateAccountScreen(),
-            //FeedbackScreen(),
-            //VendorsScreen(),
-          ],
-        ),
-      )),
+      home: CreateAccountScreen(),
+      //home: FeedbackScreen(),
+      //home: VendorsScreen(),
     );
   }
 }

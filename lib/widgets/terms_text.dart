@@ -8,7 +8,8 @@ class TermsText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 320,
+      width: 275,
+      height: 40,
       child: RichText(
         text: TextSpan(
           text: 'By creating an account you accept the ',
@@ -16,7 +17,7 @@ class TermsText extends StatelessWidget {
           children: <TextSpan>[
             TextSpan(
                 style: GoogleFonts.poppins(
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: FontWeight.w400,
                   color: Colors.blue,
                 ),
@@ -25,7 +26,7 @@ class TermsText extends StatelessWidget {
                   ..onTap = () => print('click')),
             TextSpan(
                 style: GoogleFonts.poppins(
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: FontWeight.w400,
                   color: Colors.blue,
                 ),

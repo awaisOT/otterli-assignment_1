@@ -11,7 +11,7 @@ class CategoriesVendor extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            border: Border.all(color: Colors.green),
+            border: Border.all(color: Color(0xff00A651)),
             borderRadius: const BorderRadius.all(Radius.circular(15))),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
@@ -20,7 +20,7 @@ class CategoriesVendor extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 14,
               fontWeight: FontWeight.w500,
-              color: Colors.green,
+              color: Color(0xff00A651),
             ),
           ),
         ),

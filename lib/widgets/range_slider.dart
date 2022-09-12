@@ -17,8 +17,8 @@ class _RangeSliderrState extends State<RangeSliderr> {
       child: Column(
         children: [
           Slider(
-              activeColor: Colors.green,
-              thumbColor: Colors.green,
+              activeColor: Color(0xff00A651),
+              thumbColor: Color(0xff00A651),
               inactiveColor: Colors.green[100],
               divisions: 2,
               max: 10,

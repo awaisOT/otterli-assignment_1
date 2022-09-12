@@ -10,9 +10,15 @@ class HearCircleVendor extends StatefulWidget {
 bool _value = false;
 
 class _HearCircleVendorState extends State<HearCircleVendor> {
-  final File1 = Image.asset('images/heart_empty.png');
+  final File1 = const Icon(
+    Icons.favorite,
+    color: Colors.red,
+  );
+  final File2 = const Icon(
+    Icons.favorite_border,
+    color: Colors.red,
+  );
 
-  final File2 = Image.asset('images/heart_filled.png');
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,13 +27,13 @@ class _HearCircleVendorState extends State<HearCircleVendor> {
       decoration: BoxDecoration(
           border: Border.all(color: Colors.red),
           borderRadius: const BorderRadius.all(Radius.circular(100))),
-      child: InkWell(
-        onTap: (() async {
+      child: IconButton(
+        onPressed: (() async {
           setState(() {
             _value = !_value;
           });
         }),
-        child: _value == false ? File1 : File2,
+        icon: _value == false ? File1 : File2,
       ),
     );
   }

@@ -35,6 +35,8 @@ class UpperHalfVendor extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 100.0, bottom: 0),
             child: IconButton(
+              splashRadius: 1,
+              constraints: BoxConstraints(maxWidth: 14),
               onPressed: (() {}),
               icon: const Icon(
                 Icons.info,

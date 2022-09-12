@@ -11,37 +11,41 @@ class ButtonsVendor extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(60))),
-            child: Text(
-              'Marks & Spencer',
-              style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                //color: Colors.green,
+          Container(
+            height: 56,
+            width: 170,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xff00A651),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(60))),
+              child: Text(
+                'Marks & Spencer',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  //color: Colors.green,
+                ),
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(60))),
-            child: Text(
-              ' Sainsbury’s',
-              style: GoogleFonts.poppins(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                //color: Colors.green,
+          Container(
+            height: 56,
+            width: 170,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xff00A651),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(60))),
+              child: Text(
+                'Sainsbury’s',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  //color: Colors.green,
+                ),
               ),
             ),
           ),
