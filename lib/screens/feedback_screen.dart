@@ -51,7 +51,7 @@ class FeedbackScreen extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: YesNo(),
+                        child: YesNo(false),
                       )),
                   SizedBox(
                     width: 324,
@@ -68,7 +68,7 @@ class FeedbackScreen extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: YesNo(),
+                        child: YesNo(false),
                       )),
                   SizedBox(
                     width: 324,

@@ -12,13 +12,13 @@ class _RangeSliderrState extends State<RangeSliderr> {
   double currentvalue = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 330,
       child: Column(
         children: [
           Slider(
-              activeColor: Color(0xff00A651),
-              thumbColor: Color(0xff00A651),
+              activeColor: const Color(0xff00A651),
+              thumbColor: const Color(0xff00A651),
               inactiveColor: Colors.green[100],
               divisions: 2,
               max: 10,

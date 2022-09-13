@@ -17,6 +17,8 @@ class TextFields extends StatefulWidget {
 }
 
 class _TextFieldsState extends State<TextFields> {
+  // var titleController = TextEditingController();
+  var fieldController = TextEditingController();
   final formkey = GlobalKey<FormState>();
 
   @override
@@ -49,10 +51,11 @@ class _TextFieldsState extends State<TextFields> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 11),
                     child: TextFormField(
+                      controller: fieldController,
                       textInputAction: TextInputAction.next,
                       obscureText: widget.check_obsecure,
                       decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(left: 28),
+                        contentPadding: const EdgeInsets.only(left: 28),
                         hintText: 'Enter ${widget.fieldName}',
                         hintStyle: GoogleFonts.poppins(
                           fontSize: 12,
@@ -65,7 +68,7 @@ class _TextFieldsState extends State<TextFields> {
                         if (value == null || value.isEmpty) {
                           return 'Please enter some text';
                         }
-                        return null;
+                        print(fieldController.text);
                       },
                     ),
                   ),

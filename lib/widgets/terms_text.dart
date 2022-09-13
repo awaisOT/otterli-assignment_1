@@ -7,7 +7,7 @@ class TermsText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 275,
       height: 40,
       child: RichText(

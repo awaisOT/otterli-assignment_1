@@ -30,7 +30,7 @@ class ButtonsVendor extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: 56,
             width: 170,
             child: ElevatedButton(

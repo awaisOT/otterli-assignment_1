@@ -24,8 +24,8 @@ class UpperHalfVendor extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 262,
-          width: 22898,
+          //height: 262,
+          //width: 22898,
           child: Image.asset(
             'images/test.png',
           ),
@@ -36,7 +36,7 @@ class UpperHalfVendor extends StatelessWidget {
             padding: const EdgeInsets.only(left: 100.0, bottom: 0),
             child: IconButton(
               splashRadius: 1,
-              constraints: BoxConstraints(maxWidth: 14),
+              constraints: const BoxConstraints(maxWidth: 14),
               onPressed: (() {}),
               icon: const Icon(
                 Icons.info,

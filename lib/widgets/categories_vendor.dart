@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CategoriesVendor extends StatelessWidget {
   final String txt;
-  CategoriesVendor(this.txt);
+  const CategoriesVendor(this.txt, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class CategoriesVendor extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            border: Border.all(color: Color(0xff00A651)),
+            border: Border.all(color: const Color(0xff00A651)),
             borderRadius: const BorderRadius.all(Radius.circular(15))),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
@@ -20,7 +20,7 @@ class CategoriesVendor extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 14,
               fontWeight: FontWeight.w500,
-              color: Color(0xff00A651),
+              color: const Color(0xff00A651),
             ),
           ),
         ),

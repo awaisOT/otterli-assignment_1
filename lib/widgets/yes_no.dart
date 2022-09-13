@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 
 class YesNo extends StatefulWidget {
+  bool value;
+  YesNo(@required this.value);
   @override
   State<YesNo> createState() => _YesNoState();
 }
-
-bool _value = false;
 
 class _YesNoState extends State<YesNo> {
   final File1 = Image.asset('images/no_yes.png');
@@ -15,18 +15,18 @@ class _YesNoState extends State<YesNo> {
 
   @override
   Widget build(BuildContext context) {
-    var f = File1;
+    //var f = File1;
     return InkWell(
       onTap: () async {
         setState(() {
-          _value = !_value;
+          widget.value = !widget.value;
         });
         //widget.value = false;
       },
-      child: Container(
+      child: SizedBox(
         height: 38,
         width: 98,
-        child: _value == false ? f : File2,
+        child: widget.value == false ? File1 : File2,
       ),
     );
   }

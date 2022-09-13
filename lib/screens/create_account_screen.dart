@@ -15,6 +15,9 @@ class CreateAccountScreen extends StatefulWidget {
   State<CreateAccountScreen> createState() => _CreateAccountScreenState();
 }
 
+bool val = false;
+func() {}
+
 final Formkey = GlobalKey<FormState>();
 
 class _CreateAccountScreenState extends State<CreateAccountScreen> {
@@ -59,7 +62,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 height: 17,
               ),
               Container(
-                padding: EdgeInsets.only(left: 109, right: 90),
+                padding: const EdgeInsets.only(left: 109, right: 90),
                 //alignment: Alignment.center,
                 height: 45,
                 child: Text(
@@ -107,13 +110,13 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                       elevation: 0,
                                       alignment: Alignment.topLeft,
                                     ),
+                                    onPressed: _addImage,
                                     child: const Text(
                                       'Camera',
                                       style: TextStyle(
                                           fontSize: 17,
                                           color: Color(0xff00A651)),
                                     ),
-                                    onPressed: () => _addImage(),
                                   ),
                                 ),
                                 SizedBox(
@@ -156,7 +159,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 140,
                 ),
                 //width: 24,
@@ -189,9 +192,9 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 45, bottom: 33, top: 27),
                 child: Row(
-                  children: const <Widget>[
-                    CheckBox(),
-                    TermsText(),
+                  children: <Widget>[
+                    CheckBox(func()),
+                    const TermsText(),
                   ],
                 ),
               ),
@@ -200,7 +203,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                       width: 159,
                       height: 62,
                       child: ElevatedButton(
@@ -226,13 +229,15 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: 159,
                       height: 62,
                       child: ElevatedButton(
                         onPressed: () {
+                          //widget.checkBoxValue== false ?print('fasdfa'):print('sdafasf');
                           if (Formkey.currentState!.validate()) {
                             print(Formkey);
+
                             // If the form is valid, display a snackbar. In the real world,
                             // you'd often call a server or save the information in a database.
                             ScaffoldMessenger.of(context).showSnackBar(

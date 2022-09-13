@@ -12,7 +12,7 @@ class LowerHalfVendor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
           color: Color.fromARGB(255, 255, 255, 255),
           borderRadius: BorderRadius.only(
@@ -41,12 +41,12 @@ class LowerHalfVendor extends StatelessWidget {
                     style: GoogleFonts.poppins(
                       fontSize: 17,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xffC8C8C8),
+                      color: const Color(0xffC8C8C8),
                     ),
                   ),
                 ],
               ),
-              HearCircleVendor(),
+              const HearCircleVendor(),
             ],
           ),
           const SizedBox(
@@ -57,7 +57,7 @@ class LowerHalfVendor extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 20,
               fontWeight: FontWeight.w600,
-              color: Color(0xff00A651),
+              color: const Color(0xff00A651),
             ),
           ),
           const SizedBox(
@@ -78,7 +78,7 @@ class LowerHalfVendor extends StatelessWidget {
             height: 10,
           ),
           Row(
-            children: <Widget>[
+            children: const <Widget>[
               CategoriesVendor('Snack'),
               CategoriesVendor('Kids'),
               CategoriesVendor('Sweets'),
@@ -116,7 +116,7 @@ class LowerHalfVendor extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          ButtonsVendor(),
+          const ButtonsVendor(),
         ],
       ),
     );

@@ -37,8 +37,8 @@ class _DatepickerFormState extends State<DatepickerForm> {
             readOnly: true,
             controller: date,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.only(left: 28),
-              suffixIcon: Icon(Icons.arrow_drop_down_sharp),
+              contentPadding: const EdgeInsets.only(left: 28),
+              suffixIcon: const Icon(Icons.arrow_drop_down_sharp),
               suffixIconColor: Colors.black,
               hintText: '     Select Date',
               hintStyle: GoogleFonts.poppins(
